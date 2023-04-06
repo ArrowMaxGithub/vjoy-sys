@@ -12,7 +12,6 @@ fn main() {
         .parse_callbacks(Box::new(CargoCallbacks))
         .dynamic_library_name("vJoyInterface")
         .allowlist_type("vJoyInterface")
-        .allowlist_function("vJoyInterface_new")
         .allowlist_function("GetvJoyVersion")
         .allowlist_function("vJoyEnabled")
         .allowlist_function("GetvJoyProductString")
