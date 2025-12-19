@@ -1,3 +1,9 @@
+## [0.5.1] Rustdoc patch
+- Move definition of C GUID to lib.rs via windows-sys
+
+## [0.5.0] vJoy update
+- Update to vjoy version 2.2.2.0
+
 ## [0.4.1] Rustdoc patch
 - Fixed: Broken docs link inside readme.
 
