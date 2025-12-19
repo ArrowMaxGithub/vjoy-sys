@@ -1,3 +1,6 @@
+## [0.5.2] Rustdoc patch
+- Inline pshpack1.h
+
 ## [0.5.1] Rustdoc patch
 - Move definition of C GUID to lib.rs via windows-sys
 
