@@ -62,11 +62,11 @@ typedef PVOID HDEVNOTIFY;
 #include "PPJIoctl.h"
 #endif
 
-#include <INITGUID.H>	// Definitions for controlling GUID initialization
-
 // Sideband comunication with vJoy Device
 //{781EF630-72B2-11d2-B852-00C04FAD5101}
-DEFINE_GUID(GUID_DEVINTERFACE_VJOY, 0x781EF630, 0x72B2, 0x11d2, 0xB8, 0x52, 0x00, 0xC0, 0x4F, 0xAD, 0x51, 0x01);
+// vjoy-sys 0.5.1: GUID definition moved to Rust lib.rs via windows-sys to avoid having to include INITGUID.H from the Windows SDK
+typedef struct _GUID GUID;
+extern const GUID GUID_DEVINTERFACE_VJOY;
 
 //
 // Usage example:

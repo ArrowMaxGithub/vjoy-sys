@@ -13,6 +13,7 @@ categories = ["external-ffi-bindings", "emulators", "os::windows-apis"]
 
 [dependencies]
 libloading = "0.8.0"
+windows-sys = "0.61.2"
 
 [build-dependencies]
 bindgen = "0.72.0"
