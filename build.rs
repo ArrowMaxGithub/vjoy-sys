@@ -1,5 +1,4 @@
 extern crate bindgen;
-use bindgen::CargoCallbacks;
 use std::env;
 use std::path::PathBuf;
 
@@ -9,7 +8,7 @@ fn main() {
 
     let bindings = bindgen::Builder::default()
         .header("vjoy/wrapper.h")
-        .parse_callbacks(Box::new(CargoCallbacks))
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         .dynamic_library_name("vJoyInterface")
         .allowlist_type("vJoyInterface")
         .allowlist_function("GetvJoyVersion")
@@ -52,6 +51,7 @@ fn main() {
         .allowlist_function("IsDeviceFfb")
         .allowlist_function("IsDeviceFfbEffect")
         .generate_comments(false)
+        .wrap_unsafe_ops(true)
         .generate()
         .expect("Unable to generate bindings");
 

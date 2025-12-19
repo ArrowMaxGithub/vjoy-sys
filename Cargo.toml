@@ -1,7 +1,7 @@
 [package]
 name = "vjoy-sys"
 version = "0.4.1"
-edition = "2021"
+edition = "2024"
 authors = ["Maximillian Pfeil <pfeil.maximillian@gmail.com>"]
 description = "Rust bindings to vJoy - a virtual input device driver for Windows"
 repository = "https://github.com/ArrowMaxGithub/vjoy-sys"
@@ -12,10 +12,10 @@ categories = ["external-ffi-bindings", "emulators", "os::windows-apis"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-libloading = "0.7.4"
+libloading = "0.8.0"
 
 [build-dependencies]
-bindgen = "0.64.0"
+bindgen = "0.72.0"
 
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
