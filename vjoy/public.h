@@ -413,7 +413,8 @@ typedef PJOYSTICK_POSITION_V3 PJOYSTICK_POSITION;
 #define FFB_USE_XY_AXES                     (2)
 
 // Turn on 1 byte packing of struct, dummy fields will be added when needed
-#include <pshpack1.h>
+// vjoy 0.5.2: inline pragma pack to avoid having to include pshpack1.h
+#pragma pack(push, 1)
 
 // FFB: PID Block Load Feature Report=2
 // Only one per device
@@ -472,7 +473,8 @@ typedef struct _FFB_DEVICE_PID
 } FFB_DEVICE_PID, * PFFB_DEVICE_PID;
 
 // Turn off 1-byte packing of struct
-#include <poppack.h>
+// vjoy 0.5.2: inline pragma pack to avoid having to include poppack.h
+#pragma pack(pop)
 
 // HID Descriptor definitions - Axes
 #define HID_USAGE_X             0x30
